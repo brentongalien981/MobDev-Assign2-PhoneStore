@@ -5,6 +5,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -28,18 +32,9 @@ public class PhoneModelsActivity extends AppCompatActivity {
         myRecyclerView.setLayoutManager(myLayoutManager);
 
 
-        // TODO: Delete.
-//        String[] myDataSet = new String[100];
-//        for (int i = 0; i < myDataSet.length; i++) {
-//            myDataSet[i] = "Item" + i;
-//        }
-
+        // Set the Recycler Adapter and Holder.
         ArrayList<PhoneModel> myDataSet = PhoneModelDataStore.getModelsByBrand("iPhone");
-//        PhoneModel[] myDataSet = new PhoneModel[phonesArrayList.size()];
-//        myDataSet = phonesArrayList.toArray();
-
-
-        myAdapter = new MyRecyclerViewAdapter(myDataSet);
+        myAdapter = new MyRecyclerViewAdapter(this, myDataSet);
         myRecyclerView.setAdapter(myAdapter);
     }
 }

@@ -6,4 +6,6 @@
     <dimen name="phone_brand_image_view_height">350dp</dimen>
 
     <dimen name="phone_model_image_view_width">250dp</dimen>
+    <dimen name="phone_model_image_view_height">250dp</dimen>
+    <dimen name="phone_model_name_text_view_margin_top">50dp</dimen>
 </resources>

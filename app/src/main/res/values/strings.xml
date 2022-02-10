@@ -4,4 +4,15 @@
     <string name="select_brand_text_view_message">Please select brand.</string>
     <string name="brand_text_view_default_text">iPhone</string>
     <string name="choose_model_button_text">Choose Model</string>
+
+
+    <string-array name="phone_colors">
+        <item>Black</item>
+        <item>Red</item>
+        <item>White</item>
+        <item>Green</item>
+        <item>Blue</item>
+    </string-array>
+
+
 </resources>
