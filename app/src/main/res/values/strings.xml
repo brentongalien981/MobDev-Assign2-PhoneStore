@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BrenBaga_COMP304-001_Assign2</string>
+
+    <string name="select_brand_text_view_message">Please select brand.</string>
+    <string name="brand_text_view_default_text">iPhone</string>
+    <string name="choose_model_button_text">Choose Model</string>
 </resources>
