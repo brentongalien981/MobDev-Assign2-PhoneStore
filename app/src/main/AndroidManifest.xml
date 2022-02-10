@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BrenBaga_COMP304001_Assign2">
         <activity
+            android:name=".PhoneModelsActivity"
+            android:exported="false" />
+        <activity
             android:name=".BrandActivity"
             android:exported="false" />
         <activity

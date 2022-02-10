@@ -4,4 +4,6 @@
     <dimen name="font_size_h3">28sp</dimen>
 
     <dimen name="phone_brand_image_view_height">350dp</dimen>
+
+    <dimen name="phone_model_image_view_width">250dp</dimen>
 </resources>

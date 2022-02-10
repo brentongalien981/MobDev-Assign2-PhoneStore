@@ -2,9 +2,12 @@ package com.example.brenbaga_comp304_001_assign2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -50,5 +53,12 @@ public class BrandActivity extends AppCompatActivity {
         iv.setImageResource(brandImageResourceId);
 
         return true;
+    }
+
+
+
+    public void handleChooseModel(View v) {
+        Intent myIntent = new Intent(this, PhoneModelsActivity.class);
+        startActivity(myIntent);
     }
 }
