@@ -13,6 +13,8 @@
     <string name="customer_info_title">Customer Info</string>
     <string name="customer_preferred_title_label">Preferred Title</string>
 
+    <string name="order_confirmation_header">Order Successful!</string>
+
 
     <string-array name="phone_colors">
         <item>Black</item>
