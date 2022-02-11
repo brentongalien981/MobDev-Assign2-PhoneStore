@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".FragmentBillingSummary">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Billing Summary"
+        android:textSize="@dimen/font_size_h4" />
+
+    <TextView
+        android:id="@+id/orderSummaryCustomerTitle"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummaryFirstName"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummaryLastName"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummaryStreet"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummaryCity"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummaryProvince"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummaryPostal"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummarySameShipping"
+        style="@style/my_order_summary_text_view_style" />
+
+
+</LinearLayout>

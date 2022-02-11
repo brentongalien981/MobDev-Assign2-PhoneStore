@@ -2,6 +2,7 @@
 <resources>
     <dimen name="font_size_h2">32sp</dimen>
     <dimen name="font_size_h3">28sp</dimen>
+    <dimen name="font_size_h4">24sp</dimen>
 
     <dimen name="phone_brand_image_view_height">350dp</dimen>
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".FragmentPaymentSummary">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Payment Summary"
+        android:textSize="@dimen/font_size_h4" />
+
+    <TextView
+        android:id="@+id/orderSummaryPaymentType"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummaryPaymentCardholderName"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummaryPaymentCardNumber"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummaryPaymentExpiryMonth"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummaryPaymentExpiryYear"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummaryPaymentCvc"
+        style="@style/my_order_summary_text_view_style" />
+
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".FragmentPhoneSummary">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size_h4"
+        android:text="Phone Summary" />
+
+    <TextView
+        android:id="@+id/orderSummaryPhoneName"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummaryPhonePrice"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummaryPhoneStorage"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummaryPhoneColor"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummaryPhoneBrand"
+        style="@style/my_order_summary_text_view_style" />
+
+
+
+</LinearLayout>

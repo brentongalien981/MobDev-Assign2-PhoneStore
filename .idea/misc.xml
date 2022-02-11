@@ -13,6 +13,9 @@
         <entry key="..\:/AndroidStudioProjects/COMP304Projs/assignments/ass02/BrenBaga_COMP304-001_Assign2/app/src/main/res/layout/activity_order_confirmation.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/COMP304Projs/assignments/ass02/BrenBaga_COMP304-001_Assign2/app/src/main/res/layout/activity_payment_info.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/COMP304Projs/assignments/ass02/BrenBaga_COMP304-001_Assign2/app/src/main/res/layout/activity_phone_models.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/COMP304Projs/assignments/ass02/BrenBaga_COMP304-001_Assign2/app/src/main/res/layout/fragment_billing_summary.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/COMP304Projs/assignments/ass02/BrenBaga_COMP304-001_Assign2/app/src/main/res/layout/fragment_payment_summary.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/COMP304Projs/assignments/ass02/BrenBaga_COMP304-001_Assign2/app/src/main/res/layout/fragment_phone_summary.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/COMP304Projs/assignments/ass02/BrenBaga_COMP304-001_Assign2/app/src/main/res/layout/view_holder_phone_model_item.xml" value="0.25" />
         <entry key="..\:/AndroidStudioProjects/COMP304Projs/assignments/ass02/BrenBaga_COMP304-001_Assign2/app/src/main/res/menu/menu_brands.xml" value="0.371875" />
       </map>
