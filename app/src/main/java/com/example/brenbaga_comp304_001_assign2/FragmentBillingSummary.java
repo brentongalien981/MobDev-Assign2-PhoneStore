@@ -28,10 +28,22 @@ public class FragmentBillingSummary extends Fragment {
 
         super.onViewCreated(view, savedInstanceState);
 
-//        // Set the textviews.
-        ((TextView) getActivity().findViewById(R.id.orderSummaryCustomerTitle)).setText("TODO");
-        ((TextView) getActivity().findViewById(R.id.orderSummaryFirstName)).setText("TODO");
-        ((TextView) getActivity().findViewById(R.id.orderSummaryLastName)).setText("TODO");
-        ((TextView) getActivity().findViewById(R.id.orderSummaryStreet)).setText("TODO");
+        // Instantiate the billing-info-object.
+        BillingInfoModel billing = MySharedPreferences.getBillingInfo(getActivity());
+
+
+        // Set the textviews.
+        ((TextView) getActivity().findViewById(R.id.orderSummaryCustomerTitle)).setText(billing.preferredTitle);
+        ((TextView) getActivity().findViewById(R.id.orderSummaryFirstName)).setText(billing.firstName);
+        ((TextView) getActivity().findViewById(R.id.orderSummaryLastName)).setText(billing.lastName);
+        ((TextView) getActivity().findViewById(R.id.orderSummaryEmail)).setText(billing.email);
+
+        ((TextView) getActivity().findViewById(R.id.orderSummaryPhone)).setText(billing.phoneNumber);
+        ((TextView) getActivity().findViewById(R.id.orderSummaryStreet)).setText(billing.street);
+        ((TextView) getActivity().findViewById(R.id.orderSummaryCity)).setText(billing.city);
+        ((TextView) getActivity().findViewById(R.id.orderSummaryProvince)).setText(billing.province);
+
+        ((TextView) getActivity().findViewById(R.id.orderSummaryPostal)).setText(billing.postalCode);
+        ((TextView) getActivity().findViewById(R.id.orderSummarySameShipping)).setText("Same as shipping: " + String.valueOf(billing.isSameWithShipping));
     }
 }

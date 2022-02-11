@@ -24,6 +24,7 @@ public class MySharedPreferences {
     }
 
 
+
     public static void setPhone(Context context, PhoneModel phone) {
 
         SharedPreferences myPreference = context.getSharedPreferences("CenPhone", 0);
@@ -52,5 +53,47 @@ public class MySharedPreferences {
                 myPref.getString("phoneBrand", ""));
 
         return phone;
+    }
+
+
+
+    public static void setBillingInfo(Context context, BillingInfoModel billing) {
+
+        SharedPreferences myPreference = context.getSharedPreferences("CenPhone", 0);
+        SharedPreferences.Editor prefEditor = myPreference.edit();
+
+        prefEditor.putString("billingPreferredTitle", billing.preferredTitle);
+        prefEditor.putString("billingFirstName", billing.firstName);
+        prefEditor.putString("billingLastName", billing.lastName);
+        prefEditor.putString("billingEmail", billing.email);
+        prefEditor.putString("billingPhoneNumber", billing.phoneNumber);
+        prefEditor.putString("billingStreet", billing.street);
+        prefEditor.putString("billingCity", billing.city);
+        prefEditor.putString("billingProvince", billing.province);
+        prefEditor.putString("billingPostalCode", billing.postalCode);
+        prefEditor.putBoolean("billingIsSameWithShipping", billing.isSameWithShipping);
+
+        prefEditor.commit();
+    }
+
+
+    public static BillingInfoModel getBillingInfo(Context context) {
+
+        SharedPreferences myPref = context.getSharedPreferences("CenPhone", context.MODE_PRIVATE);
+
+        BillingInfoModel billing = new BillingInfoModel(
+                myPref.getString("billingPreferredTitle", ""),
+                myPref.getString("billingFirstName", ""),
+                myPref.getString("billingLastName", ""),
+                myPref.getString("billingEmail", ""),
+                myPref.getString("billingPhoneNumber", ""),
+                myPref.getString("billingStreet", ""),
+                myPref.getString("billingCity", ""),
+                myPref.getString("billingProvince", ""),
+                myPref.getString("billingPostalCode", ""),
+                myPref.getBoolean("billingIsSameWithShipping", false)
+        );
+
+        return billing;
     }
 }

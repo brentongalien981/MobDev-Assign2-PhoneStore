@@ -116,6 +116,7 @@
     <TableRow style="@style/my_customer_info_table_row_style">
 
         <CheckBox
+            android:id="@+id/isSameAsShippingCheckBox"
             style="@style/my_customer_info_edit_text_style"
             android:layout_weight="0.7"
             android:text="I have the same shipping info." />
