@@ -26,6 +26,14 @@
         style="@style/my_order_summary_text_view_style" />
 
     <TextView
+        android:id="@+id/orderSummaryEmail"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
+        android:id="@+id/orderSummaryPhone"
+        style="@style/my_order_summary_text_view_style" />
+
+    <TextView
         android:id="@+id/orderSummaryStreet"
         style="@style/my_order_summary_text_view_style" />
 

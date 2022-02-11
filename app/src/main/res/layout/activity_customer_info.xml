@@ -56,6 +56,26 @@
     <TableRow style="@style/my_customer_info_table_row_style">
 
         <EditText
+            android:id="@+id/customerEmailEditText"
+            style="@style/my_customer_info_edit_text_style"
+            android:layout_weight="0.5"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/customerPhoneEditText"
+            style="@style/my_customer_info_edit_text_style"
+            android:layout_weight="0.5"
+            android:hint="Phone #"
+            android:inputType="phone"
+            tools:ignore="TouchTargetSizeCheck" />
+    </TableRow>
+
+
+    <TableRow style="@style/my_customer_info_table_row_style">
+
+        <EditText
             android:id="@+id/customerStreetEditText"
             style="@style/my_customer_info_edit_text_style"
             android:layout_weight="1"

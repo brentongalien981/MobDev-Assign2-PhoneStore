@@ -17,6 +17,16 @@ public class CustomerInfoActivity extends AppCompatActivity {
 
 
     public void onGoToPaymentInfo(View v) {
+
+        // Instantiate the BillingInfo obj.
+        PhoneModel selectedPhone = new PhoneModel(phone.name, phone.price, phone.storage, phone.color, phone.imageResourceId, phone.brand);
+
+
+        // Set the billing-info on MySharedPreferences.
+        MySharedPreferences.setPhone(context, selectedPhone);
+
+
+        // Go to payment-info.
         Intent intent = new Intent(this, PaymentInfoActivity.class);
         startActivity(intent);
     }
