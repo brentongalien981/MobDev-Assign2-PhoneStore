@@ -32,7 +32,7 @@ public class PhoneModelsActivity extends AppCompatActivity {
         myRecyclerView.setLayoutManager(myLayoutManager);
 
 
-        // Set the Recycler Adapter and Holder.
+        // Set the Recycler Adapter, Holder and event-handlers.
         ArrayList<PhoneModel> myDataSet = PhoneModelDataStore.getModelsByBrand("iPhone");
         myAdapter = new MyRecyclerViewAdapter(this, myDataSet);
         myRecyclerView.setAdapter(myAdapter);

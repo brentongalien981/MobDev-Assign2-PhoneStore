@@ -7,6 +7,12 @@
 
     <string name="select_phone_model_btn_text">Select</string>
 
+    <string name="phone_summary_title">Selected Phone Summary</string>
+    <string name="fill_customer_info_btn_text">Fill customer info</string>
+
+    <string name="customer_info_title">Customer Info</string>
+    <string name="customer_preferred_title_label">Preferred Title</string>
+
 
     <string-array name="phone_colors">
         <item>Black</item>
@@ -14,6 +20,16 @@
         <item>White</item>
         <item>Green</item>
         <item>Blue</item>
+    </string-array>
+
+
+    <string-array name="customer_preferred_titles">
+        <item>None</item>
+        <item>Mr</item>
+        <item>Ms</item>
+        <item>Mrs</item>
+        <item>Dr</item>
+        <item>Engr</item>
     </string-array>
 
 

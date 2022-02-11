@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="*"
+    tools:context=".CustomerInfoActivity">
+
+    <TableRow style="@style/my_customer_info_table_row_style">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/customer_info_title"
+            android:textSize="@dimen/font_size_h2" />
+    </TableRow>
+
+
+    <TableRow style="@style/my_customer_info_table_row_style">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_column="0"
+            android:layout_weight="0.3"
+            android:text="@string/customer_preferred_title_label" />
+
+        <Spinner
+            android:id="@+id/customerPreferredTitleSpinner"
+            android:layout_width="0dp"
+            android:layout_column="1"
+            android:layout_weight="0.7"
+            android:entries="@array/customer_preferred_titles"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </TableRow>
+
+
+    <TableRow style="@style/my_customer_info_table_row_style">
+
+        <EditText
+            android:id="@+id/customerFirstNameEditText"
+            style="@style/my_customer_info_edit_text_style"
+            android:layout_weight="0.5"
+            android:hint="First Name"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/customerLastNameEditText"
+            style="@style/my_customer_info_edit_text_style"
+            android:layout_weight="0.5"
+            android:hint="Last Name"
+            tools:ignore="TouchTargetSizeCheck" />
+    </TableRow>
+
+
+    <TableRow style="@style/my_customer_info_table_row_style">
+
+        <EditText
+            android:id="@+id/customerStreetEditText"
+            style="@style/my_customer_info_edit_text_style"
+            android:layout_weight="1"
+            android:hint="Street"
+            tools:ignore="TouchTargetSizeCheck" />
+    </TableRow>
+
+
+    <TableRow style="@style/my_customer_info_table_row_style">
+
+        <EditText
+            android:id="@+id/customerCityEditText"
+            style="@style/my_customer_info_edit_text_style"
+            android:layout_weight="0.7"
+            android:hint="City"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/customerProvinceEditText"
+            style="@style/my_customer_info_edit_text_style"
+            android:layout_weight="0.3"
+            android:hint="Province"
+            tools:ignore="TouchTargetSizeCheck" />
+    </TableRow>
+
+
+    <TableRow style="@style/my_customer_info_table_row_style">
+
+        <EditText
+            android:id="@+id/customerPostalCodeEditText"
+            style="@style/my_customer_info_edit_text_style"
+            android:layout_weight="0.5"
+            android:hint="Postal Code"
+            tools:ignore="TouchTargetSizeCheck" />
+    </TableRow>
+
+
+    <TableRow style="@style/my_customer_info_table_row_style">
+
+        <CheckBox
+            style="@style/my_customer_info_edit_text_style"
+            android:layout_weight="0.7"
+            android:text="I have the same shipping info." />
+
+    </TableRow>
+
+
+    <TableRow style="@style/my_customer_info_table_row_style">
+
+        <Button
+            android:id="@+id/goToFillPaymentInfoBtn"
+            style="@style/my_button_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fill payment info"
+            android:onClick="onGoToPaymentInfo" />
+
+    </TableRow>
+</TableLayout>
