@@ -74,6 +74,13 @@
             android:tag=""
             android:entries="@array/phone_colors" />
 
+        <Button
+            android:id="@+id/selectPhoneBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/my_button_style"
+            android:text="@string/select_phone_model_btn_text" />
+
 
     </LinearLayout>
 

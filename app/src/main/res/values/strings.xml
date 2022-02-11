@@ -5,6 +5,8 @@
     <string name="brand_text_view_default_text">iPhone</string>
     <string name="choose_model_button_text">Choose Model</string>
 
+    <string name="select_phone_model_btn_text">Select</string>
+
 
     <string-array name="phone_colors">
         <item>Black</item>
