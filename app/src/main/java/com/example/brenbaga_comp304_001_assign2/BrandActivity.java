@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,7 +19,10 @@ public class BrandActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_brand);
+
+        this.setBrandViews();
     }
+
 
 
     // Set the options menu.
@@ -28,11 +32,35 @@ public class BrandActivity extends AppCompatActivity {
     }
 
 
+
+
     public boolean onOptionsItemSelected(MenuItem item) {
+
+        // Set selected-brand on MySharedPreferences.
+        MySharedPreferences.setString(this,"selectedBrandItemId", String.valueOf(item.getItemId()));
+        MySharedPreferences.setString(this,"selectedBrand", item.getTitle().toString());
+
+        this.setBrandViews();
+
+        return true;
+    }
+
+
+
+    public void setBrandViews() {
+
+        // Default values.
+        String selectedBrandItemId = MySharedPreferences.getString(this,"selectedBrandItemId");
+        String selectedBrand = MySharedPreferences.getString(this,"selectedBrand");
+
+        if (selectedBrandItemId == null || selectedBrandItemId.equals("")) { selectedBrandItemId = "1"; }
+        if (selectedBrand == null || selectedBrand.equals("")) { selectedBrand = "iPhone"; }
+
+
 
         int brandImageResourceId = R.drawable.brand_iphone;
 
-        switch (item.getItemId()) {
+        switch (Integer.parseInt(selectedBrandItemId)) {
             case R.id.Samsung:
                 brandImageResourceId = R.drawable.brand_samsung;
                 break;
@@ -44,18 +72,14 @@ public class BrandActivity extends AppCompatActivity {
                 break;
         }
 
+
         // Set BrandTextView.
         TextView brandNameTextView = (TextView) findViewById(R.id.brandNameTextView);
-        brandNameTextView.setText(item.getTitle());
+        brandNameTextView.setText(selectedBrand);
 
         // Set BrandImageView.
         ImageView iv = (ImageView) findViewById(R.id.phoneBrandImageView);
         iv.setImageResource(brandImageResourceId);
-
-        // Set selected-brand on MySharedPreferences.
-        MySharedPreferences.setString(this,"selectedBrand", item.getTitle().toString());
-
-        return true;
     }
 
 

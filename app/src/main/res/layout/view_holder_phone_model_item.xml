@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
@@ -15,7 +16,7 @@
         <ImageView
             android:id="@+id/phoneModelImageView"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="350dp"
             app:srcCompat="@drawable/brand_google" />
 
     </LinearLayout>
@@ -47,32 +48,33 @@
 
             <RadioButton
                 android:id="@+id/sixFourGbRadioBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="64GB" />
+                style="@style/my_phone_models_radio_btn_style"
+                android:text="64GB"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <RadioButton
                 android:id="@+id/oneTwoEightGbRadioBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="128GB" />
+                style="@style/my_phone_models_radio_btn_style"
+                android:text="128GB"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <RadioButton
                 android:id="@+id/twoFiveSixGbRadioBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="256GB" />
+                style="@style/my_phone_models_radio_btn_style"
+                android:text="256GB"
+                tools:ignore="TouchTargetSizeCheck" />
 
 
         </RadioGroup>
 
         <Spinner
             android:id="@+id/phoneColorsSpinner"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:entries="@array/phone_colors"
             android:tag=""
-            android:entries="@array/phone_colors" />
+            tools:ignore="TouchTargetSizeCheck" />
 
         <Button
             android:id="@+id/selectPhoneBtn"

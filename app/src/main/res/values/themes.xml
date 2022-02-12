@@ -20,6 +20,10 @@
     </style>
 
 
+    <style name="my_phone_models_radio_btn_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
 
     <style name="my_customer_info_table_row_style">
         <item name="android:layout_width">match_parent</item>

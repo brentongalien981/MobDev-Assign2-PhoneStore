@@ -28,11 +28,16 @@ public class FragmentPaymentSummary extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         // Set the textviews.
-        ((TextView) getActivity().findViewById(R.id.orderSummaryPaymentType)).setText(MySharedPreferences.getString(getActivity(), "paymentType"));
-        ((TextView) getActivity().findViewById(R.id.orderSummaryPaymentCardholderName)).setText(MySharedPreferences.getString(getActivity(), "paymentCardholderName"));
-        ((TextView) getActivity().findViewById(R.id.orderSummaryPaymentCardNumber)).setText(MySharedPreferences.getString(getActivity(), "paymentCardNumber"));
-        ((TextView) getActivity().findViewById(R.id.orderSummaryPaymentExpiryMonth)).setText(MySharedPreferences.getString(getActivity(), "paymentExpiryMonth"));
-        ((TextView) getActivity().findViewById(R.id.orderSummaryPaymentExpiryYear)).setText(MySharedPreferences.getString(getActivity(), "paymentExpiryYear"));
-        ((TextView) getActivity().findViewById(R.id.orderSummaryPaymentCvc)).setText(MySharedPreferences.getString(getActivity(), "paymentCardCvc"));
+        String paymentType = MySharedPreferences.getString(getActivity(), "paymentType");
+
+        ((TextView) getActivity().findViewById(R.id.orderSummaryPaymentType)).setText(paymentType);
+
+        if (!paymentType.equals("Cash")) {
+            ((TextView) getActivity().findViewById(R.id.orderSummaryPaymentCardholderName)).setText(MySharedPreferences.getString(getActivity(), "paymentCardholderName"));
+            ((TextView) getActivity().findViewById(R.id.orderSummaryPaymentCardNumber)).setText(MySharedPreferences.getString(getActivity(), "paymentCardNumber"));
+            ((TextView) getActivity().findViewById(R.id.orderSummaryPaymentExpiryMonth)).setText(MySharedPreferences.getString(getActivity(), "paymentExpiryMonth"));
+            ((TextView) getActivity().findViewById(R.id.orderSummaryPaymentExpiryYear)).setText(MySharedPreferences.getString(getActivity(), "paymentExpiryYear"));
+            ((TextView) getActivity().findViewById(R.id.orderSummaryPaymentCvc)).setText(MySharedPreferences.getString(getActivity(), "paymentCardCvc"));
+        }
     }
 }
