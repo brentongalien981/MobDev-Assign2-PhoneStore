@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="10dp"
     android:orientation="horizontal">
 
 
@@ -26,25 +27,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:paddingLeft="10dp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/phoneModelNameTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/phone_model_name_text_view_margin_top"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="5dp"
             android:text="TextView" />
 
         <TextView
             android:id="@+id/phoneModelPriceTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             android:text="TextView" />
 
         <RadioGroup
             android:id="@+id/phoneModelStorageRadioGroup"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
 
             <RadioButton
                 android:id="@+id/sixFourGbRadioBtn"
@@ -73,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:entries="@array/phone_colors"
-            android:tag=""
+            android:layout_marginBottom="10dp"
             tools:ignore="TouchTargetSizeCheck" />
 
         <Button

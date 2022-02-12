@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="@dimen/main_linear_layout_margin"
     tools:context=".PaymentInfoActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Payment Info"
+        android:layout_marginBottom="@dimen/general_header_margin"
         android:textSize="@dimen/font_size_h3" />
 
     <RadioGroup
@@ -23,18 +25,21 @@
             android:id="@+id/paymentTypeCreditCardRadioBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/general_input_text_size"
             android:text="Credit Card" />
 
         <RadioButton
             android:id="@+id/paymentTypeDebitCardRadioBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/general_input_text_size"
             android:text="Debit Card" />
 
         <RadioButton
             android:id="@+id/paymentTypeCashRadioBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/general_input_text_size"
             android:text="Cash" />
     </RadioGroup>
 
@@ -47,15 +52,13 @@
 
         <EditText
             android:id="@+id/paymentCardCustomerNameEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/general_edit_text_style"
             android:hint="Name on card"
             tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
             android:id="@+id/paymentCardNumberEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/general_edit_text_style"
             android:inputType="number"
             android:hint="Card #"
             tools:ignore="TouchTargetSizeCheck" />
@@ -68,8 +71,7 @@
 
             <EditText
                 android:id="@+id/paymentCardExpiryDateMonthEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                style="@style/my_customer_info_edit_text_style"
                 android:layout_weight="0.4"
                 android:hint="Expiry Month"
                 android:inputType="number"
@@ -77,8 +79,7 @@
 
             <EditText
                 android:id="@+id/paymentCardExpiryDateYearEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                style="@style/my_customer_info_edit_text_style"
                 android:layout_weight="0.4"
                 android:hint="Expiry Year"
                 android:inputType="number"
@@ -86,8 +87,7 @@
 
             <EditText
                 android:id="@+id/paymentCardCvcEditText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                style="@style/my_customer_info_edit_text_style"
                 android:layout_weight="0.2"
                 android:hint="CVC"
                 android:inputType="number"

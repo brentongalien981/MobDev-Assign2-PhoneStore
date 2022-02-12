@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:layout_margin="@dimen/main_linear_layout_margin"
     tools:context=".CheckoutActivity">
 
     <TextView
@@ -16,36 +17,31 @@
 
     <TextView
         android:id="@+id/phoneSummaryBrand"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/my_order_summary_text_view_style"
         android:layout_weight="1"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/phoneSummaryModelName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/my_order_summary_text_view_style"
         android:layout_weight="1"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/phoneSummaryPrice"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/my_order_summary_text_view_style"
         android:layout_weight="1"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/phoneSummaryStorage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/my_order_summary_text_view_style"
         android:layout_weight="1"
         android:text="TextView" />
 
     <TextView
         android:id="@+id/phoneSummaryColor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/my_order_summary_text_view_style"
         android:layout_weight="1"
         android:text="TextView" />
 

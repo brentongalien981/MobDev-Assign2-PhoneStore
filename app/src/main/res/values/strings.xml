@@ -7,7 +7,7 @@
 
     <string name="select_phone_model_btn_text">Select</string>
 
-    <string name="phone_summary_title">Selected Phone Summary</string>
+    <string name="phone_summary_title">Phone Summary</string>
     <string name="fill_customer_info_btn_text">Fill customer info</string>
 
     <string name="customer_info_title">Customer Info</string>

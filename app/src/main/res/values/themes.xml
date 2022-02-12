@@ -17,6 +17,7 @@
 
     <style name="my_button_style">
         <item name="android:backgroundTint">@color/my_app_color1</item>
+        <item name="android:layout_marginTop">5dp</item>
     </style>
 
 
@@ -34,11 +35,22 @@
     <style name="my_customer_info_edit_text_style">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="general_edit_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginBottom">10dp</item>
     </style>
 
     <style name="my_order_summary_text_view_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_marginTop">5dp</item>
     </style>
 
 </resources>

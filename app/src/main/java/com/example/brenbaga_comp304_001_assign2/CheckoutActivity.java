@@ -20,7 +20,7 @@ public class CheckoutActivity extends AppCompatActivity {
 
         // Instantiate the selected phone-model based on MySharedPreferences.
         PhoneModel phone = MySharedPreferences.getPhone(this);
-        String displayedPhonePrice = String.valueOf(CheckoutActivity.roundMyDouble(phone.price, 2));
+        String displayedPhonePrice = "$" + String.valueOf(CheckoutActivity.roundMyDouble(phone.price, 2));
 
 
         // Set the controls.

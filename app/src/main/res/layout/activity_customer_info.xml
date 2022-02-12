@@ -5,6 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:stretchColumns="*"
+    android:layout_margin="@dimen/main_linear_layout_margin"
     tools:context=".CustomerInfoActivity">
 
     <TableRow style="@style/my_customer_info_table_row_style">
@@ -12,6 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:text="@string/customer_info_title"
+            android:layout_marginBottom="@dimen/general_header_margin"
             android:textSize="@dimen/font_size_h2" />
     </TableRow>
 
@@ -21,14 +23,17 @@
         <TextView
             android:layout_width="0dp"
             android:layout_column="0"
-            android:layout_weight="0.3"
+            android:layout_weight="0.4"
+            android:layout_marginBottom="@dimen/general_input_margin"
+            android:textSize="@dimen/general_input_text_size"
             android:text="@string/customer_preferred_title_label" />
 
         <Spinner
             android:id="@+id/customerPreferredTitleSpinner"
             android:layout_width="0dp"
             android:layout_column="1"
-            android:layout_weight="0.7"
+            android:layout_weight="0.3"
+            android:textSize="@dimen/general_input_text_size"
             android:entries="@array/customer_preferred_titles"
             tools:ignore="TouchTargetSizeCheck" />
 
@@ -118,7 +123,7 @@
         <CheckBox
             android:id="@+id/isSameAsShippingCheckBox"
             style="@style/my_customer_info_edit_text_style"
-            android:layout_weight="0.7"
+            android:layout_weight="1"
             android:text="I have the same shipping info." />
 
     </TableRow>

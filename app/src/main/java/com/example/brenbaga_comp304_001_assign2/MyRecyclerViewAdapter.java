@@ -46,11 +46,12 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewHo
     public void onBindViewHolder(MyRecyclerViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         PhoneModel phone = this.myDataSet.get(position);
+        String displayedPhonePrice = "$" + String.valueOf(phone.price);
 
         // Set the controls.
         holder.phoneModelImageView.setImageResource(phone.imageResourceId);
         holder.phoneModelNameTextView.setText(phone.name);
-        holder.phoneModelPriceTextView.setText(String.valueOf(phone.price));
+        holder.phoneModelPriceTextView.setText(displayedPhonePrice);
         holder.sixFourGbRadioBtn.setChecked(true);
 
 
