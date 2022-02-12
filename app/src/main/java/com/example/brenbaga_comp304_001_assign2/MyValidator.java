@@ -118,4 +118,59 @@ public class MyValidator {
         }
 
     }
+
+
+
+    public static void validatePaymentCardNumber(String fieldName, String val) throws Exception {
+        MyValidator.validateExactLength(fieldName, val, 16);
+
+        if (!TextUtils.isDigitsOnly(val)) {
+            String exceptionMsg = "Oops! " + fieldName + " is not valid.";
+            throw new Exception(exceptionMsg);
+        }
+    }
+
+
+    public static void validateMonthNum(String fieldName, String val) throws Exception {
+        MyValidator.validateMinLength(fieldName, val, 1);
+        MyValidator.validateMaxLength(fieldName, val, 2);
+
+        String exceptionMsg = "Oops! " + fieldName + " should be 1-12.";
+
+        if (!TextUtils.isDigitsOnly(val)) {
+            throw new Exception(exceptionMsg);
+        }
+
+        if (Integer.parseInt(val) < 1 || Integer.parseInt(val) > 12) {
+            throw new Exception(exceptionMsg);
+        }
+    }
+
+
+
+    public static void validateYearNum(String fieldName, String val) throws Exception {
+        MyValidator.validateExactLength(fieldName, val, 4);
+
+        String exceptionMsg = "Oops! " + fieldName + " is not valid.";
+
+        if (!TextUtils.isDigitsOnly(val)) {
+            throw new Exception(exceptionMsg);
+        }
+
+        if (Integer.parseInt(val) < 2022 || Integer.parseInt(val) > 2999) {
+            throw new Exception(exceptionMsg);
+        }
+    }
+
+
+
+    public static void validateCvc(String fieldName, String val) throws Exception {
+        MyValidator.validateExactLength(fieldName, val, 3);
+
+        String exceptionMsg = "Oops! " + fieldName + " is not valid.";
+
+        if (!TextUtils.isDigitsOnly(val)) {
+            throw new Exception(exceptionMsg);
+        }
+    }
 }

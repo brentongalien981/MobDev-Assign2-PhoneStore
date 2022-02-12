@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PaymentInfoActivity extends AppCompatActivity {
 
@@ -66,6 +67,24 @@ public class PaymentInfoActivity extends AppCompatActivity {
         MySharedPreferences.setString(this, "paymentExpiryMonth", ((EditText) findViewById(R.id.paymentCardExpiryDateMonthEditText)).getText().toString());
         MySharedPreferences.setString(this, "paymentExpiryYear", ((EditText) findViewById(R.id.paymentCardExpiryDateYearEditText)).getText().toString());
         MySharedPreferences.setString(this, "paymentCardCvc", ((EditText) findViewById(R.id.paymentCardCvcEditText)).getText().toString());
+
+
+        // Validate input fields.
+        try {
+
+            if (!this.theBillingType.equals("Cash")) {
+
+                MyValidator.validateName("Cardholder Name", MySharedPreferences.getString(this, "paymentCardholderName"));
+                MyValidator.validatePaymentCardNumber("Card #", MySharedPreferences.getString(this, "paymentCardNumber"));
+                MyValidator.validateMonthNum("Expiry Month", MySharedPreferences.getString(this, "paymentExpiryMonth"));
+                MyValidator.validateYearNum("Expiry Year", MySharedPreferences.getString(this, "paymentExpiryYear"));
+                MyValidator.validateCvc("CVC", MySharedPreferences.getString(this, "paymentCardCvc"));
+            }
+
+        } catch (Exception e) {
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+            return;
+        }
 
 
         Intent intent = new Intent(this, OrderConfirmationActivity.class);
