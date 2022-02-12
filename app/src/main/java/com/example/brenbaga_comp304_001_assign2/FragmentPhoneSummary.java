@@ -29,10 +29,11 @@ public class FragmentPhoneSummary extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         PhoneModel phone = MySharedPreferences.getPhone(getActivity());
+        String displayedPhonePrice = String.valueOf(CheckoutActivity.roundMyDouble(phone.price, 2));
 
         // Set the textviews.
         ((TextView) getActivity().findViewById(R.id.orderSummaryPhoneName)).setText(phone.name);
-        ((TextView) getActivity().findViewById(R.id.orderSummaryPhonePrice)).setText(String.valueOf(phone.price));
+        ((TextView) getActivity().findViewById(R.id.orderSummaryPhonePrice)).setText(displayedPhonePrice);
         ((TextView) getActivity().findViewById(R.id.orderSummaryPhoneStorage)).setText(phone.storage);
         ((TextView) getActivity().findViewById(R.id.orderSummaryPhoneColor)).setText(phone.color);
         ((TextView) getActivity().findViewById(R.id.orderSummaryPhoneBrand)).setText(phone.brand);

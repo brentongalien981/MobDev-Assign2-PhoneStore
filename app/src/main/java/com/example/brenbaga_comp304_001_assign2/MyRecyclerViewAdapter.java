@@ -51,6 +51,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewHo
         holder.phoneModelImageView.setImageResource(phone.imageResourceId);
         holder.phoneModelNameTextView.setText(phone.name);
         holder.phoneModelPriceTextView.setText(String.valueOf(phone.price));
+        holder.sixFourGbRadioBtn.setChecked(true);
 
 
         // Set event-handlers for each phone-storage-radio-group.

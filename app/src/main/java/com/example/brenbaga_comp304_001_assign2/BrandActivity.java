@@ -52,6 +52,9 @@ public class BrandActivity extends AppCompatActivity {
         ImageView iv = (ImageView) findViewById(R.id.phoneBrandImageView);
         iv.setImageResource(brandImageResourceId);
 
+        // Set selected-brand on MySharedPreferences.
+        MySharedPreferences.setString(this,"selectedBrand", item.getTitle().toString());
+
         return true;
     }
 

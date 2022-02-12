@@ -4,6 +4,7 @@ package com.example.brenbaga_comp304_001_assign2;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -19,6 +20,8 @@ public class MyRecyclerViewHolder extends RecyclerView.ViewHolder {
     public Spinner phoneColorsSpinner;
     public Button phoneModelSelectBtn;
 
+    public RadioButton sixFourGbRadioBtn;
+
     public MyRecyclerViewHolder(View v) {
         super(v);
         phoneModelImageView = v.findViewById(R.id.phoneModelImageView);
@@ -27,6 +30,9 @@ public class MyRecyclerViewHolder extends RecyclerView.ViewHolder {
         phoneStorageRadioGroup = v.findViewById(R.id.phoneModelStorageRadioGroup);
         phoneColorsSpinner = v.findViewById(R.id.phoneColorsSpinner);
         phoneModelSelectBtn = v.findViewById(R.id.selectPhoneBtn);
+
+        sixFourGbRadioBtn = v.findViewById(R.id.sixFourGbRadioBtn);
+
     }
 
 }
