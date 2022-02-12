@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CustomerInfoActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -44,6 +45,23 @@ public class CustomerInfoActivity extends AppCompatActivity implements AdapterVi
 
         // Set the billing-info on MySharedPreferences.
         MySharedPreferences.setBillingInfo(this, this.theBillingInfo);
+
+
+        // Validate input fields.
+        try {
+            MyValidator.validateName("First Name", this.theBillingInfo.firstName);
+            MyValidator.validateName("Last Name", this.theBillingInfo.lastName);
+            MyValidator.validateEmail("Email", this.theBillingInfo.email);
+            MyValidator.validatePhoneNumber("Phone #", this.theBillingInfo.phoneNumber);
+            MyValidator.validateAddress("Street", this.theBillingInfo.street);
+            MyValidator.validateAddress("City", this.theBillingInfo.city);
+            MyValidator.validateProvince("Province", this.theBillingInfo.province);
+            MyValidator.validatePostalCode("Postal Code", this.theBillingInfo.postalCode);
+
+        } catch (Exception e) {
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+            return;
+        }
 
 
         // Go to payment-info.
